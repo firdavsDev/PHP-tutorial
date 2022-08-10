@@ -3,7 +3,7 @@
 Ushbub kod @iNet_Hack tomonidan yozildi va @iNet_Coders kanalida tarqatildi
 */
 ob_start();
-$token = '1457309663:AAHajXyRt0D8t2cZTko9Ni17NNaLhE_Ws3A';
+$token = 'TOKEN HERE';
 define('API_KEY',$token); 
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
