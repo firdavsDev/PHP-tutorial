@@ -1,6 +1,6 @@
 <?php
 
-define('API_KEY','753874499:AAHgnp8Hrr6q5KBqojAjCxQMtmFlvmoQ5RQ');
+define('API_KEY','TOKEN');
 //-------------------------------//
 $admin = 886742473;  
 $kanal = Adabiyot_va_ona_tili;
@@ -50,14 +50,14 @@ Admin: @Telba_554",
       'reply_markup'=>json_encode([
             'inline_keyboard'=>[
               [
-['text'=>"🔎Izlash"],['text'=>"📄Yordam"]
+['text'=>"ðŸ”ŽIzlash"],['text'=>"ðŸ“„Yordam"]
 ]
 ],
 "resize_keyboard"=>true,
             ])
         ]);
 }
-if($text == '🔎Izlash'){
+if($text == 'ðŸ”ŽIzlash'){
 $user = file_get_contents('users.txt');
 $members = explode("\n",$user);
 if (!in_array($chat_id,$members)){
@@ -102,7 +102,7 @@ bot('sendMessage',[
  ]);
 }
 
-if($text == 'Xabar Y�llash' && $from_id == $admin){
+if($text == 'Xabar Yõllash' && $from_id == $admin){
 file_put_contents("panel.txt","Send");
 bot('sendMessage',[
 'chat_id' => $chat_id,
@@ -112,7 +112,7 @@ bu xabarni hamma mendagi azolar koradi",
 'reply_markup'=>json_encode([
 'keyboard'=>[
 [
-['text'=>"BoT Azolari"],['text'=>"Xabar Y�llash"]
+['text'=>"BoT Azolari"],['text'=>"Xabar Yõllash"]
 ],
 ]
 ])
